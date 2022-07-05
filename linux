@@ -94,12 +94,20 @@ sudo chmod +x   /usr/local/bin/composer
 
 composer --version
 
+cd /etc/nginx
 
+sudo vim sites-available
 
+:q----from quit from there
+sudo vim sites-available/default
 
+ ifconfig -a  --to check private ip
 
+cd /var/www --in this place you have to put your site folder
 
+sudo chown -R soikot SMS ---- to give permission to read and write
 
+composer install --ignore-platform-reqs --run to platform indepent
 
 
 
