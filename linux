@@ -1,0 +1,84 @@
+ssh keygen
+
+command--- ssh-keygen -t rsa -b 4096 -C "file name" 
+then give the file which to save the file
+ to copy the public key ----cat "public key" | pbcopy
+ 
+ such as---cat id_rana.pub | pbcopy
+ 
+ 
+ to install pbcopy
+ 
+ apt update
+ sudo apt-get install xclip -y
+ then--nano .bashrc not nano ~/.bashrc command
+ because nano .bashrc  is used to write
+ 
+ then write this two command
+    
+    
+    
+ alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+
+https://linuxconfig.org/how-to-save-and-exit-file-using-nano-editor   ----to work on nano editor
+
+
+to enter into server with private key
+
+ssh -i ~/.ssh/id_server root@ip address
+
+to give anyuser admisnistrative right----usermod -aG admin rana
+
+
+
+
+run --sudo bash
+     ---chmod 775 .
+   
+command if you find  error:ls: cannot open directory '.': Permission denied
+
+there is nor .ssh folder in any user you create ---to create one---write
+
+mkdir .ssh
+
+
+to have permission in directory
+
+
+sudo chmod 775 directory_name
+
+
+sudo vim /etc/ssh/sshd_config---to restrict the admin login in any user login
+
+to laravel deploy
+
+
+php
+nginx
+git 
+laravel
+
+to update--sudo apt-get update
+
+to check php---sudo apt-cache search php
+
+run this commands---to install php
+
+sudo apt install php7.4-cli
+
+sudo apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip php-bcmath php-tokenizer php-json php-pear
+
+sudo apt install php-mysql
+
+sudo apt-get install mysql-server
+
+then go to sudo mysql
+
+SHOW DATABSES;
+ CREATE DATABASE name;
+ 
+ sudo apt-get install nginx
+
+
