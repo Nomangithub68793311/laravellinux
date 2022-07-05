@@ -80,5 +80,5 @@ SHOW DATABSES;
  CREATE DATABASE name;
  
  sudo apt-get install nginx
-
+sudo apt-get install git
 
