@@ -132,11 +132,11 @@ server {
         # listen 443 ssl default_server;
         # listen [::]:443 ssl default_server;
         # Set root directive with your /public Laravel directory
-        root /var/www/ghygen.hi-folks.dev/htdocs/public;
+        root /var/www/html/public;
         # Set index directive with index.php
         index index.php;
         # Set server_name directive with the hostname
-        server_name ghygen.hi-folks.dev;
+        server_name "ip address or domain";
         location / {
                 try_files $uri $uri/ /index.php?$query_string;
         }
