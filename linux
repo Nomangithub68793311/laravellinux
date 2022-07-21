@@ -149,6 +149,13 @@ server {
                 deny all;
         }
 }
+CRRATE DATABASE
+
+
+CREATE DATABASE sms;
+CREATE USER 'userdb'@'localhost' IDENTIFIED BY '68793311';
+GRANT ALL PRIVILEGES ON * . * TO 'userdb'@'localhost';
+FLUSH PRIVILEGES;
 
 
 https://levelup.gitconnected.com/setup-a-vm-for-laravel-8-with-ubuntu-20-04-php8-nginx-and-mysql-4b709de88154
