@@ -119,7 +119,7 @@ sudo chown -R soikot SMS ---- to give permission to read and write
 composer install --ignore-platform-reqs --run to platform indepent
 
 
-sudo chown -R www-data:www-data /var/www/html  -to giv epermission
+sudo chown -R www-data:www-data /var/www/html  -to give epermission
 
 kwQMusKiP282RAz
 sudo ln -s /etc/nginx/sites-available/newList /etc/nginx/sites-enabled/
