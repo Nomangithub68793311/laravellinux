@@ -80,7 +80,7 @@ SHOW DATABSES;
  CREATE DATABASE name;
  
  sudo apt-get install nginx
-sudo apt-get install git
+sudo apt-get install git zip unzip
 
 sudo apt-get install zip unzip
 
@@ -110,4 +110,36 @@ sudo chown -R soikot SMS ---- to give permission to read and write
 composer install --ignore-platform-reqs --run to platform indepent
 
 
+sudo chown -R www-data:www-data /var/www/html  -to giv epermission
 
+kwQMusKiP282RAz
+sudo ln -s /etc/nginx/sites-available/newList /etc/nginx/sites-enabled/
+
+
+server {
+        listen 80;
+        listen [::]:80;
+        # SSL configuration
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        # Set root directive with your /public Laravel directory
+        root /var/www/ghygen.hi-folks.dev/htdocs/public;
+        # Set index directive with index.php
+        index index.php;
+        # Set server_name directive with the hostname
+        server_name ghygen.hi-folks.dev;
+        location / {
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+        # pass PHP scripts to FastCGI server
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php8.0-fpm.sock;
+        }
+        location ~ /\.ht {
+                deny all;
+        }
+}
+
+
+https://levelup.gitconnected.com/setup-a-vm-for-laravel-8-with-ubuntu-20-04-php8-nginx-and-mysql-4b709de88154
