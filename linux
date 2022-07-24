@@ -60,7 +60,7 @@ nginx
 git 
 laravel
 
-
+F4nURQjasDygZtv
 
 install php and everything
 
@@ -91,7 +91,7 @@ SHOW DATABSES;
  sudo apt-get install nginx
 sudo apt-get install git zip unzip
 
-sudo apt-get install zip unzip
+sudo apt-get install zip unzip git -y
 
 ssh -T git@github.com
 
@@ -119,12 +119,14 @@ sudo chown -R soikot SMS ---- to give permission to read and write
 composer install --ignore-platform-reqs --run to platform indepent
 
 
-sudo chown -R www-data:www-data /var/www/html  -to give epermission
-
-kwQMusKiP282RAz
-sudo ln -s /etc/nginx/sites-available/newList /etc/nginx/sites-enabled/
+sudo chown -R www-data:www-data /var/www/SMS  -to give epermission
 
 
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/mysite
+vi /etc/nginx/sites-available/mysite
+sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/
+ln -s /etc/nginx/sites-available/sms /etc/nginx/sites-enabled/
+vi /etc/nginx/sites-available/mysite
 server {
         listen 80;
         listen [::]:80;
@@ -132,11 +134,11 @@ server {
         # listen 443 ssl default_server;
         # listen [::]:443 ssl default_server;
         # Set root directive with your /public Laravel directory
-        root /var/www/html/public;
+        root /var/www/SMS/public;
         # Set index directive with index.php
         index index.php;
         # Set server_name directive with the hostname
-        server_name "ip address or domain";
+        server_name 143.198.232.161;
         location / {
                 try_files $uri $uri/ /index.php?$query_string;
         }
@@ -149,13 +151,39 @@ server {
                 deny all;
         }
 }
-CRRATE DATABASE
+
+100% works for mysql---in ubuntu
+
+apt install mysql-server
 
 
+sudo apt-get install mysql-server
+
+sudo mysql
+create a database---
 CREATE DATABASE sms;
-CREATE USER 'userdb'@'localhost' IDENTIFIED BY '68793311';
-GRANT ALL PRIVILEGES ON * . * TO 'userdb'@'localhost';
+
+ run this command-----
+USE mysql;
+
+create user-----
+CREATE USER 'babu'@'localhost' IDENTIFIED BY '68793311';
+
+grabt all---
+GRANT ALL ON *.* TO 'babu'@'localhost';
 FLUSH PRIVILEGES;
 
+mysql -u root -p
+
+
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+
+set up redis in ubuntu-----
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04-quickstart
+
+nginx,mysql set up
 
 https://levelup.gitconnected.com/setup-a-vm-for-laravel-8-with-ubuntu-20-04-php8-nginx-and-mysql-4b709de88154
