@@ -1,0 +1,11 @@
+ to install django python virtualenv in ububtu
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04
+
+
+if mysqlclient didint install then run
+
+
+
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+
+then run --pip install mysqlclient
