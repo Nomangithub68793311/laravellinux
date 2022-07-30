@@ -1,5 +1,12 @@
 https://www.techalyst.com/posts/install-and-configure-redis-server-for-laravel
 
+
+installing redis in digital ocean
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04
+
+
 steps
 
 sudo wget http://download.redis.io/releases/redis-3.0.1.tar.gz
